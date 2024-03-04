@@ -1,4 +1,4 @@
-import { Hono } from "https://deno.land/x/hono/mod.ts";
+import { Hono } from "npm:hono@4.0.9";
 
 const base64 = `
 AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAA
@@ -275,10 +275,9 @@ AAAAAAAAAAAAAAAAAAAAAA==
 `;
 const array = Uint8Array.from(atob(base64), (c) => c.charCodeAt(0));
 
-const app = new Hono();
-app.get("/", async (c) => {
+const app: Hono = new Hono();
+app.get("/", (c) => {
   return c.body(array, 200, { "content-type": "image/x-icon" });
 });
 
-const favicon = app;
-export default favicon;
+export const favicon = app;

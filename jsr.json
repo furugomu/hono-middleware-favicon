@@ -1,5 +1,5 @@
 {
-  "name": "@furugomu/hono-middleware-favicon",
+  "name": "@furugomu/hono-favicon",
   "version": "0.1.0",
   "exports": {
     ".": "./mod.ts"

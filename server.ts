@@ -1,7 +1,7 @@
 // deno run --allow-net server.ts
 
-import { Hono } from "https://deno.land/x/hono/mod.ts";
-import favicon from "./mod.ts";
+import { Hono } from "npm:hono@4.0.9";
+import { favicon } from "./mod.ts";
 
 const app = new Hono();
 
