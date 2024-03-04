@@ -1,0 +1,7 @@
+{
+  "name": "@furugomu/hono-middleware-favicon",
+  "version": "0.1.0",
+  "exports": {
+    ".": "./mod.ts"
+  }
+}
